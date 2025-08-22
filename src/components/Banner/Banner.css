@@ -1,0 +1,26 @@
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  height: 4px;
+  width: 4px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000;
+  opacity: 1;
+}
+
+@media screen and (min-width: 680px) {
+  .swiper-pagination-bullet {
+    height: 6px;
+    width: 6px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .swiper-pagination-bullet {
+    height: 8px;
+    width: 8px;
+  }
+}
