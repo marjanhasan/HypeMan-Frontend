@@ -1,5 +1,7 @@
 import Banner from "./components/Banner/Banner";
 import OfferHeadings from "./components/OfferHeadings/OfferHeadings";
+import HeroSection from "./components/HeroSection/HeroSection";
+import Banner1 from "./assets/banner1.png";
 
 const App = () => {
   return (
@@ -9,6 +11,13 @@ const App = () => {
       <OfferHeadings />
       {/* Banner component showing the image slider */}
       <Banner />
+      {/* Hero Section */}
+      <HeroSection
+        backgroundImage={Banner1}
+        title="Welcome to HypeManbd"
+        subtitle="Your one-stop solution for all things hype!"
+        textAlign="center"
+      />
     </div>
   );
 };
