@@ -5,6 +5,7 @@ import Banner1 from "./assets/banner1.png";
 import ServiceSection from "./components/ServiceSection/ServiceSection";
 import Footer from "./components/Footer/Footer";
 import BlogCard from "./components/BlogCard/BlogCard";
+import YTCards from "./components/YTCards/YTCards";
 
 const App = () => {
   return (
@@ -21,6 +22,8 @@ const App = () => {
         subtitle="Your one-stop solution for all things hype!"
         textAlign="center"
       />
+      {/* YouTube Cards Section */}
+      <YTCards />
       {/* Blog Section */}
       <BlogCard />
       {/* Service Section */}
