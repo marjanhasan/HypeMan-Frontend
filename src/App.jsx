@@ -2,6 +2,7 @@ import Banner from "./components/Banner/Banner";
 import OfferHeadings from "./components/OfferHeadings/OfferHeadings";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Banner1 from "./assets/banner1.png";
+import ServiceSection from "./components/ServiceSection/ServiceSection";
 
 const App = () => {
   return (
@@ -18,6 +19,8 @@ const App = () => {
         subtitle="Your one-stop solution for all things hype!"
         textAlign="center"
       />
+      {/* Service Section */}
+      <ServiceSection />
     </div>
   );
 };
