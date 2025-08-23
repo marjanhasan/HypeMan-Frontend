@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection/HeroSection";
 import Banner1 from "./assets/banner1.png";
 import ServiceSection from "./components/ServiceSection/ServiceSection";
 import Footer from "./components/Footer/Footer";
+import BlogCard from "./components/BlogCard/BlogCard";
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
         subtitle="Your one-stop solution for all things hype!"
         textAlign="center"
       />
+      {/* Blog Section */}
+      <BlogCard />
       {/* Service Section */}
       <ServiceSection />
       {/* Footer Section */}
