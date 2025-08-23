@@ -70,7 +70,7 @@ const YTCards = () => {
         {videoIds.map((id, i) => (
           <div
             key={id}
-            className="relative overflow-hidden aspect-[9/16] h-[390px] w-[220px] rounded-xl bg-black"
+            className="yt-card relative overflow-hidden aspect-[9/16] h-[390px] w-[220px] rounded-xl bg-black"
             data-index={i}
           >
             <div
