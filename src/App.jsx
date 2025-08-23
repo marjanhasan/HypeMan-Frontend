@@ -3,6 +3,7 @@ import OfferHeadings from "./components/OfferHeadings/OfferHeadings";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Banner1 from "./assets/banner1.png";
 import ServiceSection from "./components/ServiceSection/ServiceSection";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -21,6 +22,8 @@ const App = () => {
       />
       {/* Service Section */}
       <ServiceSection />
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 };
