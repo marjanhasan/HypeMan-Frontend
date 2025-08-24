@@ -6,6 +6,7 @@ import ServiceSection from "./components/ServiceSection/ServiceSection";
 import Footer from "./components/Footer/Footer";
 import BlogCard from "./components/BlogCard/BlogCard";
 import YTCards from "./components/YTCards/YTCards";
+import NavBar from "./components/NavBar/NavBar";
 
 const App = () => {
   return (
@@ -14,6 +15,8 @@ const App = () => {
       {/* Offer Headings showing at the top */}
       <OfferHeadings />
       {/* Banner component showing the image slider */}
+      {/* NavBar */}
+      <NavBar />
       <Banner />
       {/* Hero Section */}
       <HeroSection
@@ -23,7 +26,7 @@ const App = () => {
         textAlign="center"
       />
       {/* YouTube Cards Section */}
-      <YTCards />
+      {/* <YTCards /> */}
       {/* Blog Section */}
       <BlogCard />
       {/* Service Section */}
