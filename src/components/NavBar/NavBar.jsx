@@ -22,39 +22,39 @@ const NavBar = () => {
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="hidden lg:flex items-center justify-between h-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-40 hidden lg:flex items-center justify-between h-16 2xl:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Left Side: Categories & Combo Collection */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 ">
           <div
-            className="relative"
+            className=""
             onMouseEnter={() => setIsCategoryOpen(true)}
             onMouseLeave={() => setIsCategoryOpen(false)}
           >
-            <button className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
               Categories
             </button>
             {isCategoryOpen && (
-              <div className="fixed inset-x-16 top-[84px] bottom-16 bg-black/50 z-40 flex items-center justify-center">
-                <div className="bg-white w-full h-full p-8 overflow-auto">
+              <div className="z-30 absolute h-[100vh] inset-x-0  bg-black/50">
+                <div className="bg-[#F4F4F4] h-full p-8 overflow-auto max-w-7xl mx-auto">
                   <h2 className="text-2xl font-bold mb-4">Categories</h2>
                   <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <li>
-                      <a href="#" className="text-gray-700 hover:text-blue-600">
+                      <a href="#" className="text-gray-600 hover:text-gray-900">
                         Electronics
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-gray-700 hover:text-blue-600">
+                      <a href="#" className="text-gray-600 hover:text-gray-900">
                         Fashion
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-gray-700 hover:text-blue-600">
+                      <a href="#" className="text-gray-600 hover:text-gray-900">
                         Home & Garden
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-gray-700 hover:text-blue-600">
+                      <a href="#" className="text-gray-600 hover:text-gray-900">
                         Books
                       </a>
                     </li>
@@ -63,36 +63,37 @@ const NavBar = () => {
               </div>
             )}
           </div>
+
           <div
-            className="relative"
+            className=""
             onMouseEnter={() => setIsComboOpen(true)}
             onMouseLeave={() => setIsComboOpen(false)}
           >
-            <button className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
               Combo
             </button>
             {isComboOpen && (
-              <div className="fixed inset-x-16 top-[84px] bottom-16 bg-black/50 z-40 flex items-center justify-center">
-                <div className="bg-white w-full h-full p-8 overflow-auto">
+              <div className="z-30 absolute h-[100vh] inset-x-0  bg-black/50">
+                <div className="bg-[#F4F4F4] h-full p-8 overflow-auto max-w-7xl mx-auto">
                   <h2 className="text-2xl font-bold mb-4">Combo</h2>
                   <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <li>
-                      <a href="#" className="text-gray-700 hover:text-blue-600">
+                      <a href="#" className="text-gray-600 hover:text-gray-900">
                         Electronics
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-gray-700 hover:text-blue-600">
+                      <a href="#" className="text-gray-600 hover:text-gray-900">
                         Fashion
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-gray-700 hover:text-blue-600">
+                      <a href="#" className="text-gray-600 hover:text-gray-900">
                         Home & Garden
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-gray-700 hover:text-blue-600">
+                      <a href="#" className="text-gray-600 hover:text-gray-900">
                         Books
                       </a>
                     </li>
@@ -102,35 +103,35 @@ const NavBar = () => {
             )}
           </div>
           <div
-            className="relative"
+            className=""
             onMouseEnter={() => setIsCollectionOpen(true)}
             onMouseLeave={() => setIsCollectionOpen(false)}
           >
-            <button className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
               Collection
             </button>
             {isCollectionOpen && (
-              <div className="fixed inset-x-16 top-[84px] bottom-16 bg-black/50 z-40 flex items-center justify-center">
-                <div className="bg-white w-full h-full p-8 overflow-auto">
+              <div className="z-30 absolute h-[100vh] inset-x-0  bg-black/50">
+                <div className="bg-[#F4F4F4] h-full p-8 overflow-auto max-w-7xl mx-auto">
                   <h2 className="text-2xl font-bold mb-4">Collection</h2>
                   <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <li>
-                      <a href="#" className="text-gray-700 hover:text-blue-600">
+                      <a href="#" className="text-gray-600 hover:text-gray-900">
                         Tech Bundles
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-gray-700 hover:text-blue-600">
+                      <a href="#" className="text-gray-600 hover:text-gray-900">
                         Fashion Combos
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-gray-700 hover:text-blue-600">
+                      <a href="#" className="text-gray-600 hover:text-gray-900">
                         Home Essentials
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-gray-700 hover:text-blue-600">
+                      <a href="#" className="text-gray-600 hover:text-gray-900">
                         Gift Sets
                       </a>
                     </li>
@@ -177,13 +178,13 @@ const NavBar = () => {
               <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
                 <a
                   href="/login"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Login
                 </a>
                 <a
                   href="/register"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Register
                 </a>
@@ -192,6 +193,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
+
       <div className="relative lg:hidden flex items-center justify-between p-4">
         <button className="text-gray-600" onClick={() => setIsMenuOpen(true)}>
           <IoMenu />
@@ -200,7 +202,7 @@ const NavBar = () => {
           <img className="h-8 w-auto" src={brandLogo} alt="Brand Logo" />
         </div>
         <button>
-          <MdShoppingCart className="h-6 w-6 text-gray-700" />
+          <MdShoppingCart className="h-6 w-6 text-gray-600" />
         </button>
         {/* {isMenuOpen && (
           <div className="fixed inset-0 w-full bg-white  shadow-lg z-50">
@@ -209,7 +211,7 @@ const NavBar = () => {
                 <img className="h-8 w-auto" src={brandLogo} alt="Brand Logo" />
               </div>
               <button
-                className="text-gray-700 hover:text-blue-600"
+                className="text-gray-600 hover:text-gray-900"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <ImCross />
@@ -217,13 +219,13 @@ const NavBar = () => {
             </div>
             <a
               href="/login"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
             >
               Login
             </a>
             <a
               href="/register"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
             >
               Register
             </a>
