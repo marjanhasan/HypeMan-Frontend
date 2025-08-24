@@ -10,15 +10,16 @@ const NavBar = () => {
   const [isCollectionOpen, setIsCollectionOpen] = useState(false);
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const brandLogo = null; // TODO: Removed later with real logo
 
   // TODO: Implement search functionality
-  const handleSearch = (e) => {
-    e.preventDefault();
-    // Handle search functionality here
-    console.log("Search query:", searchQuery);
-  };
+  // const handleSearch = (e) => {
+  //   e.preventDefault();
+  //   // Handle search functionality here
+  //   console.log("Search query:", searchQuery);
+  // };
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -169,13 +170,14 @@ const NavBar = () => {
           {/* User Icon with Dropdown */}
           <div
             className="relative"
-            onClick={() => setIsUserDropdownOpen((prev) => !prev)}
+            onMouseEnter={() => setIsUserDropdownOpen(true)}
+            onMouseLeave={() => setIsUserDropdownOpen(false)}
           >
             <button className="text-gray-600 hover:text-gray-900">
               <HiMiniUser className="h-6 w-6 text-gray-600 hover:text-gray-900" />
             </button>
             {isUserDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+              <div className="absolute top-2 right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
                 <a
                   href="/login"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
@@ -194,44 +196,116 @@ const NavBar = () => {
         </div>
       </div>
 
+      {/* Small Screen Menu */}
       <div className="relative lg:hidden flex items-center justify-between p-4">
+        {/* Menu Button */}
         <button className="text-gray-600" onClick={() => setIsMenuOpen(true)}>
           <IoMenu />
         </button>
+        {/* Brand Logo */}
         <div className="">
           <img className="h-8 w-auto" src={brandLogo} alt="Brand Logo" />
         </div>
-        <button>
+        {/* Cart Icon */}
+        <button onClick={() => setIsCartOpen(true)}>
           <MdShoppingCart className="h-6 w-6 text-gray-600" />
         </button>
-        {/* {isMenuOpen && (
-          <div className="fixed inset-0 w-full bg-white  shadow-lg z-50">
-            <div className="flex justify-between items-center p-4">
-              <div className="">
-                <img className="h-8 w-auto" src={brandLogo} alt="Brand Logo" />
-              </div>
-              <button
-                className="text-gray-600 hover:text-gray-900"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <ImCross />
-              </button>
-            </div>
-            <a
-              href="/login"
-              className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
-            >
-              Login
-            </a>
-            <a
-              href="/register"
-              className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
-            >
-              Register
-            </a>
-          </div>
-        )} */}
       </div>
+
+      {/* Menu Sidebar */}
+      <div
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="p-4">
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            className="absolute top-4 right-4"
+          >
+            <ImCross className="h-4 w-4 text-gray-600" />
+          </button>
+          <ul className="space-y-2">
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-md"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-md"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-md"
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block px-4 py-2 text-gray-700 hover:bg-blue-100 rounded-md"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Menu Overlay when sidebar is open */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-30"
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
+      )}
+
+      {/* Cart Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
+          isCartOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="p-4">
+          <button
+            onClick={() => setIsCartOpen(false)}
+            className="absolute top-4 right-4"
+          >
+            <ImCross className="h-4 w-4 text-gray-600" />
+          </button>
+          <ul className="space-y-2">
+            <li className="text-lg font-bold mb-4">Shopping Cart</li>
+            <li>Your cart has 2 items.</li>
+            {/* Add cart items here */}
+            <li className="flex justify-between py-2 border-b">
+              <span>Product Name 1</span>
+              <span>$Price 99</span>
+            </li>
+            <li className="flex justify-between py-2 border-b">
+              <span>Product Name 2</span>
+              <span>$Price 49</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Cart Overlay when sidebar is open */}
+      {isCartOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-30"
+          onClick={() => setIsCartOpen(false)}
+        ></div>
+      )}
     </nav>
   );
 };
