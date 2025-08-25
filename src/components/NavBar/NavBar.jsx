@@ -3,6 +3,7 @@ import { HiMiniUser } from "react-icons/hi2";
 import { ImCross } from "react-icons/im";
 import { IoMenu } from "react-icons/io5";
 import { MdFavorite, MdShoppingCart } from "react-icons/md";
+import SearchBar from "../SearchBar/SearchBar";
 
 const NavBar = () => {
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
@@ -11,7 +12,6 @@ const NavBar = () => {
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
   const brandLogo = null; // TODO: Removed later with real logo
 
   // TODO: Implement search functionality
@@ -23,6 +23,7 @@ const NavBar = () => {
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
+      {/* Larger Screen Menu */}
       <div className="relative z-40 hidden lg:flex items-center justify-between h-16 2xl:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Left Side: Categories & Combo Collection */}
         <div className="flex items-center space-x-4 ">
@@ -152,17 +153,14 @@ const NavBar = () => {
         <div className="flex items-center space-x-4">
           {/* Search Bar */}
           <div className="flex items-center">
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search..."
-              className="w-full px-3 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-800"
-            />
+            <SearchBar />
           </div>
 
           {/* Cart Icon */}
-          <MdShoppingCart className="h-6 w-6 text-gray-600 hover:text-gray-900" />
+          <MdShoppingCart
+            className="h-6 w-6 text-gray-600 hover:text-gray-900"
+            onClick={() => setIsCartOpen(true)}
+          />
 
           {/* Wishlist Icon */}
           <MdFavorite className="h-6 w-6 text-gray-600 hover:text-gray-900" />
@@ -272,7 +270,7 @@ const NavBar = () => {
 
       {/* Cart Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
+        className={`fixed top-0 right-0 h-full w-64 lg:w-80 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
           isCartOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
