@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import BlogCard from "./components/BlogCard/BlogCard";
 import YTCards from "./components/YTCards/YTCards";
 import NavBar from "./components/NavBar/NavBar";
+import ProductSection from "./components/ProductSection/ProductSection";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       {/* NavBar */}
       <NavBar />
       <Banner />
+      <ProductSection />
       {/* Hero Section */}
       <HeroSection
         backgroundImage={Banner1}
