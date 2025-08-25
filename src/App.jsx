@@ -8,11 +8,18 @@ import BlogCard from "./components/BlogCard/BlogCard";
 import YTCards from "./components/YTCards/YTCards";
 import NavBar from "./components/NavBar/NavBar";
 import ProductSection from "./components/ProductSection/ProductSection";
+import PopUp from "./components/PopUp/PopUp";
 
 const App = () => {
   return (
     <div className="max-w-[1440px] mx-auto">
       <title>HypeManbd</title>
+      {/* Pop Up */}
+      <PopUp
+        title="Special Offer!"
+        description="Get 20% off on your first purchase."
+        image={Banner1}
+      />
       {/* Offer Headings showing at the top */}
       <OfferHeadings />
       {/* Banner component showing the image slider */}
