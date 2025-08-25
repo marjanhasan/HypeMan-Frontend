@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { MdShoppingCart } from "react-icons/md";
 
 const ProductCard = ({ mainImage, hoverImage, title, price }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className="relative max-w-xs w-full h-[480px] bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
+      className="relative w-[264px] h-[480px] bg-white rounded-lg shadow-md overflow-hidden flex flex-col mx-auto"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -34,21 +36,8 @@ const ProductCard = ({ mainImage, hoverImage, title, price }) => {
           />
         </div>
         {/* Heart Icon */}
-        <button className="absolute top-2 right-2 text-white hover:text-red-500 transition-colors">
-          <svg
-            className="h-6 w-6"
-            fill={isHovered ? "currentColor" : "none"}
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-            />
-          </svg>
+        <button className="absolute text-2xl top-2 right-2 text-white hover:text-red-500 transition-colors">
+          <FaHeart />
         </button>
       </div>
 
@@ -64,18 +53,18 @@ const ProductCard = ({ mainImage, hoverImage, title, price }) => {
         >
           <a
             href="#"
-            className="flex-1 bg-gray-200 text-gray-800 py-2 text-sm rounded-md text-center hover:bg-gray-300 transition-colors"
+            className="hover:bg-white hover:text-black hover:border py-2 px-1 sm:px-3 my-5 text-xs sm:text-base rounded whitespace-nowrap uppercase font-medium cursor-pointer bg-black text-white transition duration-300"
           >
             View Details
           </a>
-          <button className="flex-1 bg-blue-600 text-white py-2 text-sm rounded-md hover:bg-blue-700 transition-colors">
-            Add to Cart
+          <button className="text-4xl text-gray-600 hover:text-gray-900 cursor-pointer shrink-0">
+            <MdShoppingCart />
           </button>
         </div>
       </div>
 
       {/* Custom Transition Delay and Zoom Pulse Animation */}
-      <style jsx>{`
+      <style jsx="True">{`
         .transition-delay-100 {
           transition-property: opacity, transform;
           transition-duration: 300ms;
