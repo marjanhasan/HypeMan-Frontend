@@ -23,7 +23,7 @@ const NavBar = () => {
   // };
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="bg-white shadow-md sticky top-0 z-40">
       {/* Larger Screen Menu */}
       <div className="relative z-40 hidden lg:flex items-center justify-between h-16 2xl:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Left Side: Categories & Combo Collection */}

@@ -30,10 +30,13 @@ const App = () => {
       {/* Hero Section */}
       <HeroSection
         backgroundImage={Banner1}
-        title="Welcome to HypeManbd"
-        subtitle="Your one-stop solution for all things hype!"
-        textAlign="center"
+        title="50% Off"
+        subtitle="Don't miss out on our exclusive deals!"
+        textAlign="right"
       />
+      <ProductSection />
+      <HeroSection backgroundImage={Banner1} />
+      <ProductSection />
       {/* YouTube Cards Section */}
       {/* <YTCards /> */}
       {/* Blog Section */}
