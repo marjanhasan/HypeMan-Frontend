@@ -12,6 +12,7 @@ const NavBar = () => {
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isWishlistOpen, setIsWishlistOpen] = useState(false);
   const brandLogo = null; // TODO: Removed later with real logo
 
   // TODO: Implement search functionality
@@ -163,7 +164,10 @@ const NavBar = () => {
           />
 
           {/* Wishlist Icon */}
-          <MdFavorite className="h-6 w-6 text-gray-600 hover:text-gray-900" />
+          <MdFavorite
+            className="h-6 w-6 text-gray-600 hover:text-gray-900"
+            onClick={() => setIsWishlistOpen(true)}
+          />
 
           {/* User Icon with Dropdown */}
           <div
@@ -270,7 +274,7 @@ const NavBar = () => {
 
       {/* Cart Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 lg:w-80 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
+        className={`fixed top-0 right-0 h-full w-64 lg:w-80 2xl:w-96 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
           isCartOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -302,6 +306,42 @@ const NavBar = () => {
         <div
           className="fixed inset-0 bg-black/50 z-30"
           onClick={() => setIsCartOpen(false)}
+        ></div>
+      )}
+      {/* Wishlist Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 lg:w-80 2xl:w-96 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
+          isWishlistOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="p-4">
+          <button
+            onClick={() => setIsWishlistOpen(false)}
+            className="absolute top-4 right-4"
+          >
+            <ImCross className="h-4 w-4 text-gray-600" />
+          </button>
+          <ul className="space-y-2">
+            <li className="text-lg font-bold mb-4">Shopping Cart</li>
+            <li>Your cart has 2 items.</li>
+            {/* Add cart items here */}
+            <li className="flex justify-between py-2 border-b">
+              <span>Product Name 1</span>
+              <span>$Price 99</span>
+            </li>
+            <li className="flex justify-between py-2 border-b">
+              <span>Product Name 2</span>
+              <span>$Price 49</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Cart Overlay when sidebar is open */}
+      {isWishlistOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-30"
+          onClick={() => setIsWishlistOpen(false)}
         ></div>
       )}
     </nav>
