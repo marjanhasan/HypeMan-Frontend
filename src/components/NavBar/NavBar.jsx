@@ -271,6 +271,7 @@ const NavBar = () => {
           onClick={() => setIsMenuOpen(false)}
         ></div>
       )}
+      {/* Menu Sidebar End */}
 
       {/* Cart Sidebar */}
       <div
@@ -308,6 +309,8 @@ const NavBar = () => {
           onClick={() => setIsCartOpen(false)}
         ></div>
       )}
+      {/* Cart Sidebar End */}
+
       {/* Wishlist Sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-64 lg:w-80 2xl:w-96 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
@@ -337,13 +340,14 @@ const NavBar = () => {
         </div>
       </div>
 
-      {/* Cart Overlay when sidebar is open */}
+      {/* Wishlist Overlay when sidebar is open */}
       {isWishlistOpen && (
         <div
           className="fixed inset-0 bg-black/50 z-30"
           onClick={() => setIsWishlistOpen(false)}
         ></div>
       )}
+      {/* Wishlist Sidebar End */}
     </nav>
   );
 };
