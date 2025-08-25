@@ -27,13 +27,13 @@ const NavBar = () => {
       {/* Larger Screen Menu */}
       <div className="relative z-40 hidden lg:flex items-center justify-between h-16 2xl:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Left Side: Categories & Combo Collection */}
-        <div className="flex items-center space-x-4 ">
+        <div className="flex items-center space-x-4">
           <div
             className=""
             onMouseEnter={() => setIsCategoryOpen(true)}
             onMouseLeave={() => setIsCategoryOpen(false)}
           >
-            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium  cursor-pointer">
               Categories
             </button>
             {isCategoryOpen && (
@@ -72,7 +72,7 @@ const NavBar = () => {
             onMouseEnter={() => setIsComboOpen(true)}
             onMouseLeave={() => setIsComboOpen(false)}
           >
-            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium cursor-pointer">
               Combo
             </button>
             {isComboOpen && (
@@ -110,7 +110,7 @@ const NavBar = () => {
             onMouseEnter={() => setIsCollectionOpen(true)}
             onMouseLeave={() => setIsCollectionOpen(false)}
           >
-            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium cursor-pointer">
               Collection
             </button>
             {isCollectionOpen && (
@@ -146,7 +146,7 @@ const NavBar = () => {
         </div>
 
         {/* Center: Brand Logo */}
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 cursor-pointer">
           <img className="h-8 w-auto" src={brandLogo} alt="Brand Logo" />
         </div>
 
@@ -159,13 +159,13 @@ const NavBar = () => {
 
           {/* Cart Icon */}
           <MdShoppingCart
-            className="h-6 w-6 text-gray-600 hover:text-gray-900"
+            className="h-6 w-6 text-gray-600 hover:text-gray-900 cursor-pointer"
             onClick={() => setIsCartOpen(true)}
           />
 
           {/* Wishlist Icon */}
           <MdFavorite
-            className="h-6 w-6 text-gray-600 hover:text-gray-900"
+            className="h-6 w-6 text-gray-600 hover:text-gray-900 cursor-pointer"
             onClick={() => setIsWishlistOpen(true)}
           />
 
@@ -175,7 +175,7 @@ const NavBar = () => {
             onMouseEnter={() => setIsUserDropdownOpen(true)}
             onMouseLeave={() => setIsUserDropdownOpen(false)}
           >
-            <button className="text-gray-600 hover:text-gray-900">
+            <button className="text-gray-600 hover:text-gray-900 cursor-pointer">
               <HiMiniUser className="h-6 w-6 text-gray-600 hover:text-gray-900" />
             </button>
             {isUserDropdownOpen && (
@@ -282,7 +282,7 @@ const NavBar = () => {
         <div className="p-4">
           <button
             onClick={() => setIsCartOpen(false)}
-            className="absolute top-4 right-4"
+            className="absolute top-4 right-4 cursor-pointer"
           >
             <ImCross className="h-4 w-4 text-gray-600" />
           </button>
@@ -320,14 +320,14 @@ const NavBar = () => {
         <div className="p-4">
           <button
             onClick={() => setIsWishlistOpen(false)}
-            className="absolute top-4 right-4"
+            className="absolute top-4 right-4  cursor-pointer"
           >
             <ImCross className="h-4 w-4 text-gray-600" />
           </button>
           <ul className="space-y-2">
-            <li className="text-lg font-bold mb-4">Shopping Cart</li>
-            <li>Your cart has 2 items.</li>
-            {/* Add cart items here */}
+            <li className="text-lg font-bold mb-4">Wishlist</li>
+            <li>Your wishlist has 2 items.</li>
+            {/* Add wishlist items here */}
             <li className="flex justify-between py-2 border-b">
               <span>Product Name 1</span>
               <span>$Price 99</span>
