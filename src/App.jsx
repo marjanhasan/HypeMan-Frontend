@@ -38,7 +38,7 @@ const App = () => {
       <HeroSection backgroundImage={Banner1} />
       <ProductSection />
       {/* YouTube Cards Section */}
-      {/* <YTCards /> */}
+      <YTCards />
       {/* Blog Section */}
       <BlogCard />
       {/* Service Section */}

@@ -36,7 +36,7 @@ const ProductCard = ({ mainImage, hoverImage, title, price }) => {
           />
         </div>
         {/* Heart Icon */}
-        <button className="absolute text-2xl top-2 right-2 text-white hover:text-red-500 transition-colors">
+        <button className="absolute text-2xl top-2 right-2 text-white hover:text-red-500 transition-colors cursor-pointer">
           <FaHeart />
         </button>
       </div>
