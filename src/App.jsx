@@ -21,7 +21,11 @@ const App = () => {
         image={Banner1}
       />
       {/* Offer Headings showing at the top */}
-      <OfferHeadings />
+      <OfferHeadings
+        text="🎉 Flash Sale! 30% off everything"
+        till="Sep 15, 2025"
+        ctaLink="/shop"
+      />
       {/* Banner component showing the image slider */}
       {/* NavBar */}
       <NavBar />
