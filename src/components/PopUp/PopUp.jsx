@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { ImCross } from "react-icons/im";
+import { Link } from "react-router";
 
-const PopUp = ({ title, description, image }) => {
+const PopUp = ({ title = "", description = "", image }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Open modal on initial render
@@ -49,7 +50,12 @@ const PopUp = ({ title, description, image }) => {
             {/* Content */}
             <div className="p-6">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">{title}</h2>
-              <p className="text-gray-600 mb-6">{description}</p>
+              <p className="text-gray-600 mb-6">
+                {description}{" "}
+                <Link to="/#" className="text-blue-500">
+                  Go to Offer
+                </Link>
+              </p>
             </div>
           </div>
         </div>
