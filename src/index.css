@@ -1,1 +1,9 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
+@layer base {
+  html,
+  body,
+  * {
+    font-family: "Cabin", Arial, Helvetica, sans-serif;
+  }
+}

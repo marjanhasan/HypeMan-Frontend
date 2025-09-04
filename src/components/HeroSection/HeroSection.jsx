@@ -20,7 +20,7 @@ const HeroSection = ({
           textAlign === "right" ? "text-right" : "text-center"
         }`}
       >
-        <h1 className="text-2xl lg:text-5xl font-bold text-white mb-4">
+        <h1 className="text-2xl lg:text-5xl font-bold text-white mb-4 uppercase">
           {title}
         </h1>
         {subtitle && (

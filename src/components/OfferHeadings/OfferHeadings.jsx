@@ -1,5 +1,6 @@
 /**
  * OfferHeadings component displays the promotional heading at the top of the page.
+ * with expiry countdown if 'till' prop is provided.
  * @returns JSX.Element
  */
 
@@ -72,6 +73,7 @@ const OfferHeadings = ({ text = "Welcome to hypemanbd!", till, ctaLink }) => {
       pauseOnHover={true}
       speed={50}
       gradient={true}
+      gradientWidth={100}
     >
       {marqueeContent}
     </Marquee>

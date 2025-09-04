@@ -36,7 +36,9 @@ const ServiceSection = () => {
           className="flex flex-col items-center text-center py-12 px-4 bg-[#282828]"
         >
           {service.icon}
-          <h2 className="text-white text-lg md:text-xl">{service.title}</h2>
+          <h2 className="text-white text-lg md:text-xl uppercase">
+            {service.title}
+          </h2>
           <p className="text-white text-xs md:text-sm">{service.description}</p>
         </div>
       ))}

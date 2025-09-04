@@ -38,7 +38,7 @@ const ProductSection = () => {
   return (
     <div className="py-8 px-4 bg-gray-100">
       <div className="text-center my-6">
-        <h2 className="text-2xl font-bold">All Products</h2>
+        <h2 className="text-2xl font-bold uppercase">All Products</h2>
         <p className="text-gray-600">Discover our range of products</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">

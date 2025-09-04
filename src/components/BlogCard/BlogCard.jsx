@@ -40,7 +40,7 @@ const BlogCard = () => {
   return (
     <div className="bg-gray-400 text-center">
       <div className="text-center text-white pt-8">
-        <h2 className="text-xl font-medium">Blog Title</h2>
+        <h2 className="text-xl font-medium uppercase">Blog Title</h2>
         <p className="text-sm">Blog description goes here...</p>
       </div>
       <div className="max-w-[80%] mx-auto blogCard">
