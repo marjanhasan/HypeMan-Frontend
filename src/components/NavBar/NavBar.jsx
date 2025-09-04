@@ -29,12 +29,12 @@ const NavBar = () => {
         {/* Left Side: Categories & Combo Collection */}
         <div className="flex items-center space-x-4">
           <div
-            className=""
+            className="uppercase"
             onMouseEnter={() => setIsCategoryOpen(true)}
             onMouseLeave={() => setIsCategoryOpen(false)}
           >
-            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium  cursor-pointer">
-              Categories
+            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium  cursor-pointer uppercase">
+              Shop by Categories
             </button>
             {isCategoryOpen && (
               <div className="z-30 absolute h-[100vh] inset-x-0  bg-black/50">
@@ -68,50 +68,12 @@ const NavBar = () => {
           </div>
 
           <div
-            className=""
-            onMouseEnter={() => setIsComboOpen(true)}
-            onMouseLeave={() => setIsComboOpen(false)}
-          >
-            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium cursor-pointer">
-              Combo
-            </button>
-            {isComboOpen && (
-              <div className="z-30 absolute h-[100vh] inset-x-0  bg-black/50">
-                <div className="bg-[#F4F4F4] h-full p-8 overflow-auto max-w-7xl mx-auto">
-                  <h2 className="text-2xl font-bold mb-4">Combo</h2>
-                  <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <li>
-                      <a href="#" className="text-gray-600 hover:text-gray-900">
-                        Electronics
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="text-gray-600 hover:text-gray-900">
-                        Fashion
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="text-gray-600 hover:text-gray-900">
-                        Home & Garden
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="text-gray-600 hover:text-gray-900">
-                        Books
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            )}
-          </div>
-          <div
-            className=""
+            className="uppercase"
             onMouseEnter={() => setIsCollectionOpen(true)}
             onMouseLeave={() => setIsCollectionOpen(false)}
           >
-            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium cursor-pointer">
-              Collection
+            <button className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium cursor-pointer uppercase">
+              Shop by Collection
             </button>
             {isCollectionOpen && (
               <div className="z-30 absolute h-[100vh] inset-x-0  bg-black/50">
