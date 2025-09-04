@@ -12,7 +12,7 @@ import PopUp from "./components/PopUp/PopUp";
 
 const App = () => {
   return (
-    <div className="max-w-[1440px] mx-auto">
+    <div className="max-w-[1440px] mx-auto font-cabin">
       <title>HypeManbd</title>
       {/* Pop Up */}
       <PopUp
